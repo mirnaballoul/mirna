@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>css</title>
+        <meta charset="UTF_8">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .navpar{
+                background-color:red;
+                overflow: hidden;
+            }
+            .navpar a{
+                float: left;
+                color:white;
+                text-align: center;
+                padding: 30px 40px;
+            }
+            a:hover{
+                background: #333333;
+                font-weight: 20px;
+                letter-spacing: 1em;
+            }
+        </style>
+        <style>
+            .active{
+                width: 200px;
+                height: 200px;
+                line-height: 200px;
+                text-align: center;
+                background:black;
+                border: 1px solid #333333;
+                float: left;
+                margin: 0.5px;
+                }
+                #rectangle1{
+                    background-color:orange;
+                }
+                #rectangle2{
+                    background-color: blue;
+                }
+                #rectangle3{
+                    background-color:pink;
+                }
+                #rectangle4{
+                    background-color:white;
+                }
+        </style>
+        <certer>
+            <Font aria-setsize="12" color="red" >M</Font>
+            <Font aria-setsize="12" color="black" >I</Font>
+            <Font aria-setsize="12" color="pink" >R</Font>
+            <Font aria-setsize="12" color="blue" >N</Font>
+            <Font aria-setsize="12" color="green">A</Font>
+            <Font aria-setsize="12" color="black">_</Font>
+            <Font aria-setsize="12" color="black">B</Font>
+            <Font aria-setsize="12" color="orange">A</Font>
+            <Font aria-setsize="12" color="yellow">L</Font>
+            <Font aria-setsize="12" color="red">L</Font>
+            <Font aria-setsize="12" color="blue" >O</Font>
+            <Font aria-setsize="12" color="pink" >U</Font>
+            <Font aria-setsize="12" color="black">L</Font>
+        </certer>
+        <style>
+            .footer{
+                left: 0px;
+                bottom: 0px;
+                width: 100%;
+                background:red;
+                color:white;
+                text-align: center;
+                position:fixed;
+            }
+            .footer:hover{
+                background: #333333;
+                font-weight: 10px;
+                letter-spacing: 1em;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <div class="navpar">
+            <a class="article" href="home">Home</a>
+            <a href="news">News</a>
+            <a href="contact">Contact</a>
+            <a href="profile">Profile</a>
+        </div>
+        <div class="footer">
+            <p>footer</p>
+        </div>
+        <div>
+            <div id="rectangle1" class="active" onclick="changebody('rectangle1')"></div>
+            <div id="rectangle2" class="active" onclick="changebody('rectangle2')"></div>
+            <div id="rectangle3" class="active" onclick="changebody('rectangle3')"></div>
+            <div id="rectangle4" class="active" onclick="changebody('rectangle4')"></div>
+        </div>
+        <div>
+            <label>change webage background to:</label>
+            <button type="button" onclick="changebodybg('red')">red</button>
+            <button type="button" onclick="changebodybg('black')">black</button>
+            <button type="button" onclick="changebodybg('gray')">gray</button>
+            <button type="button" onclick="changebodybg('white')">white</button>
+        </div>
+
+        <script>
+            function changebody(id){
+                let hold = document.getElementById(id);
+                if(hold.style.background!=='red'){
+                    hold.style.background='red';
+                }else {
+                    for (let i =0 ; i< rect.length;++i)
+                    {
+                        if (rect[i].id == id)
+                        {
+                            hold.style.background = rect[i].color;
+                        }
+                    }
+                }
+            }
+            function changebodybg(color){
+                document.body.style.background=color;
+            }
+            let rect=[
+                {
+                    color:"orange",
+                    id:"rectangle1",
+                },
+                {
+                    color:"blue",
+                    id:"rectangle2",
+                },
+                {
+                    color:"pink",
+                    id:"rectangle3",
+                },
+                {
+                    color:"white",
+                    id:"rectangle4",
+                },
+             ]
+        </script>
+    </body>
+</html>
